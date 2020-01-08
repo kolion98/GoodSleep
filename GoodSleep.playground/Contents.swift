@@ -15,6 +15,9 @@ func insertionSort ( l: inout [String]) {
         l[index] = currentValue
     }
 }
+// 풀이1
+
+// 모르겠다
 
 
 // 문제 2
@@ -30,6 +33,10 @@ for word in words {
         }
     }
 }
+// 풀이 2
+var myfavorite: [String] = []
+myfavorite += words.filter(){$0.contains("q")}.filter(){$0.contains("lm")}
+
 
 // 문제 3
 
@@ -40,6 +47,10 @@ for dinner in dinnerMenu {
         sum += dinner.value
     }
 }
+// 풀이 3
+var result : Int = 0
+dinnerMenu.filter(){$0.value<20000}.map(){result += ($0.value)}
+
 
 // 문제 4
 
@@ -52,6 +63,9 @@ for room in meetingRooms {
         print(room.self)
     }
 }
+// 풀이 4
+meetingRooms.filter(){$0.key.count > 6}.map(){print($0.self)}
+
 
 // 문제 5
 
@@ -66,4 +80,9 @@ var getnumbers: [Double] = []
 for item in numbers {
     getnumbers += [Multier(item, item - 4)]
 }
+
+// 풀이 5
+var mygetnumbers: [Double] = []
+mygetnumbers += numbers.map(){Multier($0, $0-4)}
+
 
