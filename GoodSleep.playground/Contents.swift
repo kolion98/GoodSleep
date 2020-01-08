@@ -54,19 +54,16 @@ for room in meetingRooms {
 }
 
 // 문제 5
-var qunax: [String: Int] = ["qunax":1, "qunax1":2,"qunax2":3,"qunax3":4,"qunax4":5,"qunax6":6]
 
-for item in qunax {
-    if item.value < 2{
-        print(item.key)
-    } else {
-        if item.value > 5{
-            let item1 = item.key
-            print(item1)
-        }
-        else {
-            let item1 = item.value
-            print(item1)
-        }
-    }
+func Multier(_ n: Double, _ x: Double) -> Double{
+    return n*x*4
 }
+
+var numbers: [Double] = [65,32,37,60,65,15,90]
+
+var getnumbers: [Double] = []
+
+for item in numbers {
+    getnumbers += [Multier(item, item - 4)]
+}
+
